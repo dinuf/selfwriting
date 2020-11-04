@@ -1,0 +1,200 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+  outline:none ;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+}
+
+
+.avatar{
+  background: url('sprite/Avatar.png') no-repeat 0 0;
+	width: 180px;
+  height: 180px;
+  background-size:contain;
+  animation-name:avatarAnimation;
+  position: relative;
+  animation-duration:2s;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
+  margin-right: 25px;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes avatarAnimation{
+  from{top:0px;}
+  to{top:25px;}
+}
+
+ #input {
+    width: 100%;
+    font-size:17px;
+    display: block;
+    color:rgba(196, 196, 198);
+     white-space: pre-wrap;  
+     font-family: Verdana,Geneva,sans-serif;
+     
+}
+
+.chat-bubble{
+  display: inline-block;
+  width: 0px;
+  height:0px;
+  background-color: rgba(29, 27, 34);
+  overflow: scroll;
+  animation-duration:1s ;
+  animation-delay: 6s;
+  box-sizing: border-box;
+  animation-name:bubbleAnimation;
+  animation-fill-mode: forwards;  
+  position: relative;
+}
+@keyframes bubbleAnimation {
+  from{height: 0px; width:0px;}
+  to{ width: 525px;height:220px;padding-left:30px;padding-top:20px;}
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.comment-color {
+  color:#EB6E3D;
+}
+.chat-bubble{
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+.avatar-chat{
+  display: flex;
+  justify-content: center;
+  animation-name: avatarChat;
+  animation-duration:5s;
+  animation-fill-mode: forwards;  
+}
+@keyframes avatarChat{
+  from{position:relative; left:-2990px;}
+  to{position:relative;left:0px;}
+}
+.contact{
+  margin: 40px auto 100px auto;
+  display: flex;
+}
+.chat-arrow{
+  width: 0;
+  height: 0;
+  border-top: 0px solid rgba(29, 27, 34);
+  border-left: 0px solid transparent;
+  animation-name: chatArrow;
+  animation-delay: 6s;
+  animation-duration:2s;
+  display: inline-block;
+  margin-top: 25px;
+  animation-fill-mode: forwards; 
+}
+@keyframes chatArrow{
+  from{border-top: 0px solid rgba(29, 27, 34);border-left: 0px solid transparent; }
+  to{border-top: 35px solid rgba(29, 27, 34);border-left: 30px solid transparent;}
+}
+.contact-index{
+  display: none; 
+}
+#github-logo{
+  background: url('sprite/logos.png') no-repeat -197px -39px;
+}
+#latestwork-logo{
+  background: url('sprite/logos.png') no-repeat -115px -39px;
+}
+#linkedin-logo{
+  background: url('sprite/logos.png') no-repeat -38px -37px;
+}
+#shadow{
+  background: url('sprite/circleshadow.png') no-repeat 0 0;
+  display: block;
+  transition: 1s;
+  opacity: 0;
+  margin:110px auto 0px auto;
+  width: 823px;
+  height: 216px;
+  animation-name:shadowAnimation;
+  animation-delay:17.5s;
+  animation-fill-mode: forwards; 
+}
+@keyframes shadowAnimation{
+from{opacity: 0;}
+to{opacity: 1;}
+}
+.logos,.contact-text{
+  display: none;
+}
+
+.contact-cards{
+  transition:2s;
+  display: inline-block;
+  margin-top: 25px;
+  width: 0px;
+  height: 0px;
+  cursor:pointer;
+  }
+@media screen and (max-width:1028px){
+
+.contact-cards{
+  margin-top: 25px;
+  
+}
+.contact{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  margin: 0px auto 150px auto;
+}
+
+
+}
