@@ -9,7 +9,7 @@ window.onload = function () {
       Here you can check my self-writing Portofolio.
       I hope you will enjoy it. */
 
-      /* Start coding */
+      /* Start css */
 
       #body {
         transition:1s;
@@ -70,7 +70,7 @@ window.onload = function () {
       width: fit-content;
       margin:45px auto 0px auto;
 
-      /* End coding */
+      /* End css */
       `;
 
 
